@@ -1,14 +1,13 @@
 name: test
-on: [push]
 
-    branches:
-      - master
-
-jobs:
-  my-first-workflow:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: echo
+on:
+   push:
+      branches:
+      - "master"
+  jobs :
+    release-and-deploy:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Echo the branch name
       run: echo "something"
   
