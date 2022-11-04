@@ -6,7 +6,6 @@ on:
       - master
 jobs:
   my-first-workflow:
-
     runs-on: ubuntu-latest
 
     steps:
