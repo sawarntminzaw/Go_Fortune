@@ -80,7 +80,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<https://https://cheap-trousers-production.up.railway.app/|Open Application>"
+                  "text": "<https://cheap-trousers-production.up.railway.app/|Open Application>"
                 }
               }
             ]
