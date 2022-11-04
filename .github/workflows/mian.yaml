@@ -13,4 +13,13 @@ jobs:
     steps:
     - name: echo
       run: echo "something"
-  
+    - name: echo1
+      uses: actions/checkout@v3
+    - name: Use Node 12
+        uses: actions/setup-node@v3
+        with:
+          node-version: 12.x
+    - name: Deploy
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ cicdca }}
