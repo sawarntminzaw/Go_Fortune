@@ -32,56 +32,60 @@ jobs:
       with:
         payload: |
           {
-          "blocks": [
-          {
-          "type": "header",
-          "text": {
-          "type": "plain_text",
-          "text": "DipSA55 CI/CD Assignment Submission",
-          "emoji": true
+            "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "DipSA55 CI/CD Assignment Submission",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Name:*\nSaw Arnt Min Zaw"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Metriculation:*\nA0265084B"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Email:*\narntminzaw@gmail.com"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Repository:*\nhttps://github.com/sawarntminzaw/Go_Fortune"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Deployment:*\nhttps://cheap-trousers-production.up.railway.app"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "<https://https://cheap-trousers-production.up.railway.app/|Open Application>"
+                }
+              }
+            ]
           }
-          },
-          {
-          "type": "section",
-          "fields": [
-          {
-          "type": "mrkdwn",
-          "text": "*Name:*\nSaw Arnt Min Zaw"
-          {
-          "type": "mrkdwn",
-          "text": "*Metriculation:*\nA0265084B"
-          }
-          ]
-          },
-          {
-          "type": "section",
-          "fields": [
-          {
-          "type": "mrkdwn",
-          "text": "*Email:*\narntminzaw@gmail.com"
-          },
-          {
-          "type": "mrkdwn",
-          "text": "*Repository:*\nhttps://github.com/sawarntminzaw/Go_Fortune"
-          },
-          {
-          "type": "section",
-          "fields": [
-          {
-          "type": "mrkdwn",
-          "text": "*Deployment:*\nhttps://cheap-trousers-production.up.railway.app"
-          }
-          ]
-          },
-          {
-          "type": "section",
-          "text": {
-          "type": "mrkdwn",
-          "text": "<https://https://cheap-trousers-production.up.railway.app/|Open Application>"
-          }
-          }
-          ]
-          }
+  
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
