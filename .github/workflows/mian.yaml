@@ -13,5 +13,4 @@ jobs:
     steps:
     - name: echo
       run: echo "something"
-    - name: dd
-      run: echo "sss" 
+  
