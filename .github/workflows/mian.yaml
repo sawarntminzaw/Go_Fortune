@@ -20,6 +20,6 @@ jobs:
       with:
         node-version: 12.x
     - name: Deploy
-        run: railway up
-        env:
-          RAILWAY_TOKEN: ${{ cicdca }}
+      run: railway up
+      env:
+        RAILWAY_TOKEN: ${{ cicdca }}
