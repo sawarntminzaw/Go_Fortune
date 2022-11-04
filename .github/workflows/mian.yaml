@@ -1,12 +1,16 @@
 name: test
 
 on:
-   push:
-      branches: [master,"v1.0"]
-  jobs :
-    release-and-deploy:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Echo the branch name
+  push:
+    branches: "v[0-9]+.[0-9]+" 
+      
+
+jobs:
+  my-first-workflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: echo
       run: echo "something"
   
