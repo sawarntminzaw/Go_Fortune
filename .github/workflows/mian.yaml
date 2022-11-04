@@ -22,4 +22,4 @@ jobs:
     - name: Deploy
       run: railway up
       env:
-        RAILWAY_TOKEN: ${{ cicdca }}
+        RAILWAY_TOKEN: ${{ secrets.CICDCA_RAILWAY }}
