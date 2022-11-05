@@ -1,4 +1,4 @@
-name: test1
+name: sawarntminzaw
 
 on:
   push:
@@ -12,21 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Why echo
-      run: echo "something"
     - name: echo1
+      run: echo "something"
+    - name: echo2
       uses: actions/checkout@v3
     - name: Node 16
       uses: actions/setup-node@v3
       with:
         node-version: 16
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref_name }}
+        release_name: ${{ github.ref_name }}
     - name: Install Railway
       run: npm i -g @railway/cli
     - name: Deploy
       run: railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.CICDCA_RAILWAY }}
-    - name: Send custom JSON data to Slack workflow
+    - name: Send JSON data to SLACK 
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with:
