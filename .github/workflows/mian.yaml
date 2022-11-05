@@ -9,8 +9,8 @@ on:
 jobs:
   my-first-workflow:
 
+    if: "!contains(github.event.commits[0].message, '#NORUN')"
     runs-on: ubuntu-latest
-
     steps:
     - name: echo1
       run: echo "something"
