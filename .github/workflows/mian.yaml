@@ -12,7 +12,7 @@ jobs:
     if: "!contains(github.event.commits[0].message, '#NORUN')"
     runs-on: ubuntu-latest
     steps:
-    - name: echo1
+    - name: echoname
       run: echo "something"
     - name: echo2
       uses: actions/checkout@v3
